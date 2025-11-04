@@ -8,6 +8,8 @@ app.use(bodyParser.json());
 
 const db =require('./db');
 
+require('dotenv').config();
+const PORT =process.env.PORT || 3000;
 
 
  app.get('/',(req,res)=>{
@@ -18,7 +20,7 @@ const db =require('./db');
 const personRoutes = require('./routes/personRouter');
 app.use('/person', personRoutes);
 
-    app.listen(3000,()=>{
+    app.listen(PORT,()=>{
         console.log("Listening on Port 3000....");
         
     });
