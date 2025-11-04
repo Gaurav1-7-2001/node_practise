@@ -4,12 +4,10 @@ require('dotenv').config();
 
 // const mongoUrl=process.env.MONGO_DB_LOCAL;
 
-const mongoUrl= process.env.MONGO_DB || 'mongodb+srv://gaurav:gaurav123@cluster0.18hmwnq.mongodb.net/'
+const mongoUrl= process.env.MONGO_DB 
 // setup mongodb connection
 
-mongoose.connect(mongoUrl,{
-
-})
+mongoose.connect(mongoUrl)
 
 // get default connection
 
